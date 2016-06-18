@@ -30,8 +30,7 @@
         required for ABS.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>Set up manual transcoding pipeline using Amazon Elastic
-          Transcoder.</p>
+          <p>Use Amazon Lambda to run a script each time a new object is created in the upload S3 bucket.  The script creates a job to transcode the uploaded file into three HLS-ready files at 400k, 1M and 2M bitrates.  These files will be created in a different 'output' bucket.</p>
         </div>
       </div>
       <div class="callout">
@@ -40,7 +39,7 @@
         service and a well developed network of global edge locations.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>Make transcoded files available via Amazon Cloudfront.</p>
+          <p>The output bucket is being mirrored by CloudFront CDN making the transcoded files available at 43 edge locations around the world.</p>
         </div>
       </div>
       <div class="callout">
