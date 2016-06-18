@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- player skin -->
-  <link href="skin/functional.css" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta content="ie=edge" http-equiv="x-ua-compatible">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Video Platform Specification</title>
-  <link href="css/foundation.css" rel="stylesheet">
-  <link href="css/app.css" rel="stylesheet">
-  <!-- for video tag based installs flowplayer depends on jQuery 1.7.2+ -->
-
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js">
-  </script>
-</head>
-<body>
+<? include('./layouts/header.php');?>
+  
   <div class="row">
     <div class="columns">
-      <div class="callout">
+      <h1>Video Platform Specification</h1>
+      <div class="callout">      
         <h3>Part 1 - Upload</h3>
         <h4>Video On Demand</h4>
         <p>Our system would need to make uploading video as easy as Youtube.
@@ -30,8 +16,7 @@
         Wirecast/OBS via RTMP and have the facility to also receive a backup stream.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>While eventually this will need to be a web-based interface, to
-          start we can manually upload videos to Amazon S3.</p>
+          <p>Use Amazon S3 PHP SDK to build simple upload form that uploads a file to an S3 bucket.</p>
         </div>
       </div>
       <div class="callout">
@@ -92,7 +77,4 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js">
-  </script>
-</body>
-</html>
+<? include('./layouts/footer.php');?>
