@@ -6,8 +6,6 @@ require 'start.php';
 
 if(isset($_FILES['file'])) {
   
-  echo "FILE!";
-  
   $file = $_FILES['file'];
   
   // File details
@@ -22,13 +20,31 @@ if(isset($_FILES['file'])) {
   
   $key = md5(uniqid());
   $tmp_file_name = "{$key}.{$extension}";
-  $tmp_file_path = "./files/{$tmp_file_name}";
+  $tmp_file_path = "files/{$tmp_file_name}";
   
   // Move tempfile
   
-  move_uploaded_file($tmp_file_name, $tmp_file_path);
+  move_uploaded_file($tmp_name, $tmp_file_path);
   
-
+  // Catch problem uploading to S3
+  
+  try {
+    $s3->putObject([
+      'Bucket'=> $config['s3']['bucket'],
+      'Key'=>"uploads/{$name}",
+      'Body'=>fopen($tmp_file_path, 'rb'),
+      'ACL'=>'public-read'      
+    ]);
+    
+    unlink($tmp_file_path);
+    
+  } catch (S3Exception $e) {
+    $flashmessge=true;
+    $flashstatus="danger";
+    $flashtext="There was a problem uploading this file to Amazon S3 - please try again in a few minutes.";
+   echo $e->getMessage();
+  }
+  
   }
 
 ?>
