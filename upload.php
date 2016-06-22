@@ -53,6 +53,7 @@ if(isset($_FILES['file'])) {
   <div class="row">
     <div class="columns">
       <h1>Upload</h1>
+      <p>Due to simple upload form, files are limited to around 40MB in size.</p>
       <form action="upload.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
         <input type="file" name="file">
         <input type="submit" name="Upload">     	

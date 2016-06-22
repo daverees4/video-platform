@@ -11,8 +11,12 @@
   <link href="css/app.css" rel="stylesheet">
   <!-- for video tag based installs flowplayer depends on jQuery 1.7.2+ -->
 
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js">
-  </script>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  
+  <!-- include flowplayer -->
+  
+   <script src="flowplayer.min.js"></script>
+   
 </head>
 <body>
   <div class="top-bar" style="margin-bottom: 20px;">

@@ -16,7 +16,7 @@
         Wirecast/OBS via RTMP and have the facility to also receive a backup stream.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>Use Amazon S3 PHP SDK to build simple upload form that uploads a file to an S3 bucket.</p>
+          <p>Use Amazon S3 PHP SDK to build simple upload form that uploads a file to an Amazon S3 bucket.</p>
         </div>
       </div>
       <div class="callout">
@@ -39,7 +39,7 @@
         service and a well developed network of global edge locations.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>The output bucket is being mirrored by CloudFront CDN making the transcoded files available at 43 edge locations around the world.</p>
+          <p>The output bucket is being mirrored by CloudFront CDN making the transcoded files available at 53 edge locations around the world.</p>
         </div>
       </div>
       <div class="callout">
