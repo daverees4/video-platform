@@ -26,6 +26,12 @@
         <li>
           <a href="./upload.php">Upload</a>
         </li>
+          <li>
+          <a href="./watch.php?videoid=0aImy1Kc8R">Example VOD Playback</a>
+        </li>
+        <li>
+          <a href="./live.php">Live</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -16,7 +16,11 @@
         Wirecast/OBS via RTMP and have the facility to also receive a backup stream.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>Use Amazon S3 PHP SDK to build simple upload form that uploads a file to an Amazon S3 bucket.</p>
+          <h4>Video On Demand</h4>
+          <p>Use Amazon S3 PHP SDK to build simple upload form that uploads a file to an Amazon S3 bucket. <a href="./upload.php">View Form</a>.</p>
+          <h4>Live</h4>
+          <p>Use Amazon EC2 to provide a server running NGINX's rtmp module to receive live video.  Video can be uploaded from an encoder like OBS or Wirecast.</p>
+          <p>Encoder should point to rtmp://ec2-52-208-119-65.eu-west-1.compute.amazonaws.com/live and have a stream name of davetest</p>
         </div>
       </div>
       <div class="callout">
@@ -30,7 +34,10 @@
         required for ABS.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
+          <h4>Video On Demand</h4>
           <p>Use Amazon Lambda to run a script each time a new object is created in the upload S3 bucket.  The script creates a job to transcode the uploaded file into three HLS-ready files at 400k, 1M and 2M bitrates.  These files will be created in a different 'output' bucket.</p>
+          <h4>Live</h4>
+          Use FFMPEG to transcode the incoming RTMP stream for HLS streaming - again, 3 levels of quality. This is available to incoming connections via HTTP on port 80 rather than the RTMP port 1935. 
         </div>
       </div>
       <div class="callout">
@@ -39,7 +46,7 @@
         service and a well developed network of global edge locations.</p>
         <div class="callout success">
           <h4>Minimum Viable Product</h4>
-          <p>The output bucket is being mirrored by CloudFront CDN making the transcoded files available at 53 edge locations around the world.</p>
+          <p>The VOD output bucket and the live FFMPEG output is mirrored by CloudFront CDN making the transcoded files available at 53 edge locations around the world.</p>
         </div>
       </div>
       <div class="callout">
@@ -70,8 +77,13 @@
         </ul>
             <div class="callout success">
               <h4>Minimum Viable Product</h4>
-              <p>Set up demo interfaces using some of these features.</p>
+              <p>Playback of Live and On Demand Streams</p>   
+              <h4>Video on Demand</h4>
+              <p>An example of a file <a href="watch.php?videoid=0aImy1Kc8R">uploaded via the upload form, transcoded and played back via Cloudfront</a>.</p>
+              <h4>Live</h4>
+              <p>Any appropriate video uploaded to the Live server should <a href="./live.php">appear here</a>.
             </div>
+            
 
       </div>
     </div>

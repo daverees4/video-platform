@@ -10,7 +10,7 @@
 <div class="row">
   <div class="large-12 columns">
     <div data-live="true" data-ratio="0.5625" class="flowplayer fixed-controls">
-      <video data-title="Live stream">
+      <video>
         <source type="application/x-mpegurl" src="http://d3rjjofeplqma4.cloudfront.net/transcoder/output/<?=$_GET['videoid'];?>/playlist.m3u8">
       </video>
     </div>
