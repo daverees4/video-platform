@@ -3,6 +3,7 @@
   <div class="row">
     <div class="columns">
       <h1>Video Platform Specification</h1>
+      <img src="./img/pipeline.png" style="width: 100%"/>
       <div class="callout">      
         <h3>Part 1 - Upload</h3>
         <h4>Video On Demand</h4>
