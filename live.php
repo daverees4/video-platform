@@ -13,7 +13,7 @@
   <div class="large-12 medium-12 columns">
     <div data-live="true" data-ratio="0.5625" class="flowplayer fixed-controls">
       <video data-title="Live stream">
-        <source type="application/x-mpegurl" src="http://d13ot61jzxsx6y.cloudfront.net/davetest.m3u8">
+        <source type="application/x-mpegurl" src="http://ec2-52-209-131-58.eu-west-1.compute.amazonaws.com/live/myStream/playlist.m3u8">
       </video>
     </div>
   </div>
